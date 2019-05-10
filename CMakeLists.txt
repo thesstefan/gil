@@ -15,6 +15,7 @@ cmake_minimum_required(VERSION 3.10)
 #-----------------------------------------------------------------------------
 # Options
 #-----------------------------------------------------------------------------
+option(GIL_BUILD_BENCHMARKS "Builds all available benchmarks in the benchmark directory" OFF)
 option(GIL_BUILD_EXAMPLES "Build examples" ON)
 option(GIL_BUILD_HEADER_TESTS "Enable self-contained header tests" ON)
 option(GIL_ENABLE_EXT_IO "Enable IO extension, tests and examples (require libjpeg, libpng, libtiff)" ON)
@@ -256,4 +257,8 @@ add_subdirectory(test)
 #-----------------------------------------------------------------------------
 if(GIL_BUILD_EXAMPLES AND GIL_ENABLE_EXT_IO)
   add_subdirectory(example)
+endif()
+
+if(GIL_BUILD_BENCHMARKS)
+  add_subdirectory(benchmark)
 endif()
