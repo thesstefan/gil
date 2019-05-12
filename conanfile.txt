@@ -1,10 +1,11 @@
-[build_requires]
-google-benchmark/1.4.1@mpusz/stable
-
 [requires]
 libpng/1.6.34@bincrafters/stable
 libjpeg/9c@bincrafters/stable
 libtiff/4.0.9@bincrafters/stable
+
+# Add required remote:
+# conan remote add conan-mpusz https://api.bintray.com/conan/mpusz/conan-mpusz
+google-benchmark/1.4.1@mpusz/stable
 
 [generators]
 cmake
