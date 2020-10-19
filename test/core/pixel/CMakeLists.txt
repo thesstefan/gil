@@ -7,6 +7,7 @@
 #
 foreach(_name
   bit_aligned_pixel_reference
+  color_convert
   color_convert_cmyk
   concepts
   is_pixel
